@@ -4,35 +4,22 @@ import java.util.Scanner;
 
 public class Interval {
     public static void main(String[] args) {
-        System.out.println("Введите первое число:");
+        System.out.println("Введите число:");
         Scanner input = new Scanner(System.in);
-        int firstNumber;
-        firstNumber = input.nextInt();
-        System.out.println("Выберите знак для арифметической операции:");
-        String sign;
-        sign = input.next();
-        System.out.println("Введите второе число:");
-        int secondNumber;
-        secondNumber = input.nextInt();
-        switch (sign) {
-            case "+":
-                System.out.println(firstNumber + sign + secondNumber + "=" + (firstNumber+secondNumber));
-                break;
-            case "-":
-                System.out.println(firstNumber + sign + secondNumber + "=" + (firstNumber-secondNumber));
-                break;
-            case "*":
-                System.out.println(firstNumber + sign + secondNumber + "=" + (firstNumber*secondNumber));
-                break;
-            case "/":
-                if (secondNumber == 0) {
-                    System.out.println ("На ноль делить нельзя.");
-                } else {
-                System.out.println(firstNumber + sign + secondNumber + "=" + (firstNumber/secondNumber));
-                break;}
+        int number;
+        number = input.nextInt();
+        if (number>=0 && number<=14){
+            System.out.println (number + " находится в промежутке [0..14]");
+            } else if (number>=15 && number<=35){
+            System.out.println (number + " находится в промежутке [15..35]");
+            } else if (number>=36 && number<=50) {
+            System.out.println(number + " находится в промежутке [36..50]");
+            } else if (number>=51 && number<=100) {
+            System.out.println(number + " находится в промежутке [51..100]");
+            } else {
+            System.out.println(number + " не попало ни в один промежуток");
+            }
+        }
         }
 
 
-
-    }
-}
